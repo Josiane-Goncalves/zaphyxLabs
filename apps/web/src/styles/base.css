@@ -1,0 +1,78 @@
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-family: var(--font-sans);
+    font-size: 100%;
+    font-synthesis: none;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+  }
+
+  body {
+    min-width: 0;
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    overflow-wrap: anywhere;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--tracking-heading);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--text-display);
+    line-height: var(--text-display--line-height);
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+  }
+
+  h4, h5, h6 {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration-line: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  :focus-visible {
+    outline: var(--focus-width) solid var(--color-primary);
+    outline-offset: var(--focus-offset);
+  }
+
+  ::selection {
+    color: var(--color-background);
+    background-color: var(--color-primary);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
